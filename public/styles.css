@@ -54,12 +54,20 @@ main.got-data {
 }
 
 @font-face {
-  font-family: CustomFont;
+  font-family: h1font;
   src: url(BespokeStencil-Extrabold.otf);
+}
+@font-face {
+  font-family: ninomtavruli;
+  src: url(bpg-nino-mtavruli-webfont.woff);
+}
+@font-face {
+  font-family: regularfont;
+  src: url(GA\ Cursor\ Regular.woff2);
 }
 
 h1 {
-  font-family: CustomFont;
+  font-family: h1font;
   display: block;
   text-align: center;
   font-size: 2.9em;
@@ -86,6 +94,7 @@ h1 {
 }
 
 .container2 {
+  font-family: regularfont;
   background-color: white;
   display: none;
   align-items: stretch;
@@ -460,6 +469,7 @@ p {
 }
 
 #btn-sakadastro, #btn-amonaweri {
+  font-family: ninomtavruli;
   display: block;
   /* background-color: white; */
   width: 20rem;
@@ -473,6 +483,8 @@ p {
 
 
 #btn-meria {
+  font-family: ninomtavruli;
+
   /* background-color: black;
   color: white; */
   width: 40rem;
