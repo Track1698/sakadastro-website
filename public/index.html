@@ -6,41 +6,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>მოძებნე საკადასტრო კოდი</title>
 	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="converter.css">
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
+  <div class="dim" id="dim">
     <div class="loading">
-        <div class="finger finger-1">
+       <div class="finger finger-1">
           <div class="finger-item">
-            <span></span><i></i>
+             <span></span><i></i>
           </div>
-        </div>
-                    <div class="finger finger-2">
+       </div>
+       <div class="finger finger-2">
           <div class="finger-item">
-            <span></span><i></i>
+             <span></span><i></i>
           </div>
-        </div>
-                    <div class="finger finger-3">
+       </div>
+       <div class="finger finger-3">
           <div class="finger-item">
-            <span></span><i></i>
+             <span></span><i></i>
           </div>
-        </div>
-                    <div class="finger finger-4">
+       </div>
+       <div class="finger finger-4">
           <div class="finger-item">
-            <span></span><i></i>
+             <span></span><i></i>
           </div>
-        </div>
-                    <div class="last-finger">
-          <div class="last-finger-item"><i></i></div>
-        </div>
-              </div>
-	<div class="dim" id="dim">
-		<div id="advert" class="advert">
-			<h2 class="typewriter-text" id="typingheading">გთხოვთ დაიცადოთ სანამ ინფორმაციას მოვაგროვებთ...</h2>
-			<img src="banner.gif">
-		</div>
-	</div>
+       </div>
+       <div class="last-finger">
+          <div class="last-finger-item"></div>
+       </div>
+    </div>
+    <h2 class="typewriter-text" id="typingheading">გთხოვთ დაელოდოთ...</h2>
+    <div id="advert" class="advert">
+      <video autoplay loop muted>
+        <source src="banner.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
 	<main class="" id="maindiv">
 		<div class="container " id="info">
             <h1>SAKADASTRO.GE</h1>
@@ -99,11 +104,11 @@
             </div>
         </div>
         <div class="container3 " id="container3">
-            <button class="button" id="btn-sakadastro">საკადასტრო რუკა</button>
+            <button class="button button-27" id="btn-sakadastro">საკადასტრო რუკა</button>
             <div class="gap">.</div>
-            <button class="button" id="btn-amonaweri">ამონაწერი საჯარო რეესტრიდან</button>
+            <button class="button button-27" id="btn-amonaweri">ამონაწერი საჯარო რეესტრიდან</button>
             <div class="clear"></div>
-            <button class="button" id="btn-meria">მერიის საიტზე გადასვლა</button>
+            <button class="button button-27" id="btn-meria">მერიის საიტზე გადასვლა</button>
         </div>
 	  </main>
 	<footer>

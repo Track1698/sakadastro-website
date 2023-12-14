@@ -53,18 +53,24 @@ main.got-data {
   justify-content: flex-start;
 }
 
+@font-face {
+  font-family: CustomFont;
+  src: url(BespokeStencil-Extrabold.otf);
+}
+
 h1 {
+  font-family: CustomFont;
   display: block;
   text-align: center;
-  font-size: 2.22em;
+  font-size: 2.9em;
   font-weight: 600;
-  letter-spacing: -0.055em;
+  letter-spacing: 0.1em;
   margin-bottom: 15px;
 
 }
 
 .container {
-  margin-top: 27rem;
+  margin-top: 15vh;
   position: relative;
   /*margin: calc(75px + 10vh + 10vw) auto 0 auto; */
   padding: 10px;
@@ -76,12 +82,12 @@ h1 {
 }
 
 .container.got-data {
-  margin-top: 2rem;
+  margin-top: 2vh;
 }
 
 .container2 {
   background-color: white;
-  display: flex;
+  display: none;
   align-items: stretch;
   width: 50rem; /* Adjust the width as needed */
   height: auto; /* Adjust the height as needed */
@@ -123,6 +129,7 @@ h1 {
 .container2.active {
   opacity: 1;
   transform: translateY(0); /* Move the element to its normal position */
+  display: flex;
 }
 
 p {
@@ -164,32 +171,9 @@ p {
   background-color: #00000000;
 }
 
-.button:hover {
-  cursor: pointer;
-}
-
-#btn-sakadastro, #btn-amonaweri {
-  display: block;
-  background-color: white;
-  width: 20rem;
-  height: 5rem;
-  border-radius: 30px;
-  font-size: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  float: left;
-}
 
 
-#btn-meria {
-  background-color: black;
-  color: white;
-  width: 40rem;
-  height: 5rem;
-  border-radius: 30px;
-  font-size: 30px;
-  float: left;
-}
+
 
 .search-box {
   position: relative;
@@ -394,7 +378,7 @@ p {
 
 .advert {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -406,6 +390,9 @@ p {
   margin: 0; /* Reset margin to prevent unwanted spacing */
   letter-spacing: 0.15em; /* Adjust the letter spacing for better visibility */
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  margin-top: 17%;
+  margin-left: 40%;
+  margin-right: 40%;
 }
 
 @keyframes typing {
@@ -422,7 +409,6 @@ p {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
   }
 }
 
@@ -432,3 +418,66 @@ p {
 
 
 
+
+
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 0px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#btn-sakadastro, #btn-amonaweri {
+  display: block;
+  /* background-color: white; */
+  width: 20rem;
+  height: 5rem;
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+
+#btn-meria {
+  /* background-color: black;
+  color: white; */
+  width: 40rem;
+  height: 5rem;
+  border-radius: 30px;
+  font-size: 30px;
+  float: left;
+}

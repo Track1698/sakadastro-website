@@ -21,7 +21,7 @@ let containerdiv = null;
 let container2div = null;
 let container3div = null;
 
-let loadingdiv = null;
+//let loadingdiv = null;
 let advertdiv = null;
 
 
@@ -235,13 +235,13 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('clicked', inputKadastr);
 
         
-        loadingdiv = document.getElementById("loading");
+        //loadingdiv = document.getElementById("loading");
         advertdiv = document.getElementById("dim");
         
 
         // Check if the input is not empty
         if (inputKadastr.trim() !== '') {
-            loadingdiv.style.display = 'block';
+            //loadingdiv.style.display = 'block';
             advertdiv.style.display = 'block';
             // Prepare the data to be sent in the request body
             const data = {
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(response => response.json())
             .then(result => {
-                loadingdiv.style.display = 'none';
+                //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
 
                 // Handle the result returned from the backend
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 updateDOM(result);
             })
             .catch(error => {
-                loadingdiv.style.display = 'none';
+                //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
             
                 console.error('Error:', error);
@@ -288,4 +288,5 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 });
+
 
