@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             // Make a POST request to the Flask endpoint
-            fetch('http://localhost:5000/api/your_endpoint', {
+            fetch('https://sakadastro-2wrl4gpsga-ew.a.run.app/api/your_endpoint', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -261,23 +261,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
 
-                // Handle the result returned from the backend
-                //console.log(result);
-                // Update the DOM with the result data
                 getElements();
                 updateDOM(result);
             })
             .catch(error => {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
-            
-                //console.error('Error:', error);
-                // Display an error message to the user
-                //infodiv.innerHTML = '<p>დაფიქსირდა შეცდომა. გთხოვთ სცადოთ მოგვიანებით</p>';
-                
-                // Hide pdfdiv and linkdiv when an error occurs
-                //pdfdiv.style.display = 'none';
-                //linkdiv.style.display = 'none';
             });
             
             
