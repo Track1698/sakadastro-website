@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             // Make a POST request to the Flask endpoint
-            fetch('https://sakadastro-2wrl4gpsga-ew.a.run.app/api/your_endpoint', {
+            fetch('https://sakadastro-2wrl4gpsga-ew.a.run.app/api/getinformation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
