@@ -1,0 +1,433 @@
+html, body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*, *:before, *:after {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a, a:visited, a:hover {
+  color: blue;
+  text-decoration: none;
+}
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 26px;
+  width: 100%;
+  height: 100%;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: linear-gradient(rgba(252, 252, 252, 0.5), rgba(255, 255, 255, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a39a3', endColorstr='#4167a8', GradientType=1 );
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  transition: justify-content 0.5s ease-in-out;
+}
+
+main.got-data {
+  justify-content: flex-start;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  font-size: 2.22em;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  margin-bottom: 15px;
+
+}
+
+.container {
+  margin-top: 27rem;
+  position: relative;
+  /*margin: calc(75px + 10vh + 10vw) auto 0 auto; */
+  padding: 10px;
+  width: 40%;
+  max-width: 840px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: margin 0.5s ease-in-out;
+}
+
+.container.got-data {
+  margin-top: 2rem;
+}
+
+.container2 {
+  background-color: white;
+  display: flex;
+  align-items: stretch;
+  width: 50rem; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(-20px); /* Move the element up initially */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  border: 3px solid #000000;
+}
+
+
+.left-column {
+  flex: 1;
+  padding: 10px;
+  text-align: right;
+}
+
+.right-column {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.vertical-line {
+  width: 10px;
+  border-radius: 3px;
+  background-color: #000; /* Change the color as needed */
+  height: 90%; /* Adjust the height as desired */
+  margin: auto 10px;
+}
+
+/* Optional: Add some styling to the rows for better visibility */
+.container2 p {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+
+.container2.active {
+  opacity: 1;
+  transform: translateY(0); /* Move the element to its normal position */
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+.container3 {
+  overflow: hidden; /* Clear float */
+  opacity: 0;
+  transform: translateY(-20px); /* Move the element up initially */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.container3.active {
+  opacity: 1;
+  transform: translateY(0); /* Move the element to its normal position */
+}
+
+.clear {
+  clear: both;
+}
+
+.notebook-square {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px; /* Adjust the size of squares as needed */
+  position: relative;
+  width: 7rem; /* Ensure it takes up the full width of its container */
+  height: 7rem; /* Ensure it takes up the full height of its container */
+  padding: 10px; /* Add padding to separate the grid from content */
+}
+
+
+
+.gap {
+  display: block;
+  float: left;
+  width: 10px;
+  background-color: #00000000;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#btn-sakadastro, #btn-amonaweri {
+  display: block;
+  background-color: white;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 30px;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+
+#btn-meria {
+  background-color: black;
+  color: white;
+  width: 40rem;
+  height: 5rem;
+  border-radius: 30px;
+  font-size: 30px;
+  float: left;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 60px;
+  border-radius: 120px;
+  margin: 0 auto;
+}
+
+
+.search-icon, .go-icon {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  width: 86px;
+  line-height: 61px;
+  text-align: center;
+}
+
+.iconss {
+  width: 1.5rem;
+}
+
+.search-icon {
+  left: 0;
+  pointer-events: none;
+  font-size: 3em;
+  will-change: transform;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90eg);
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -o-transform-origin: center center;
+  transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -webkit-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -moz-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -o-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+.si-rotate {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+.go-icon {
+  right: 0;
+  font-size: 2.5em;
+  pointer-events: none;
+  font-size: 1.38em;
+  will-change: opacity;
+  cursor: default;
+  opacity: 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -webkit-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -moz-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -o-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+.go-in {
+  opacity: 1;
+  font-size: 2.5em;
+  pointer-events: all;
+  cursor: pointer;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+  transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -webkit-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -moz-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -o-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+.search-border {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: 60px;
+}
+.border {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+.border {
+  stroke-dasharray: 740;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+  -webkit-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+  -moz-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+  -o-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+}
+.border-searching .border {
+  stroke-dasharray: 740;
+  stroke-dashoffset: 459;
+  transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+  -webkit-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+  -moz-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+  -o-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+}
+#search {
+  font-family: 'Montserrat Alternates', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 120px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  padding: 0 68px 0 68px;
+  color: #ffffff;
+  font-size: 1.32em;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  outline: none;
+}
+
+
+#search::-webkit-input-placeholder {color: #ffffff;}
+#search::-moz-placeholder {color: #ffffff;}
+#search:-ms-input-placeholder {color: #ffffff;}
+#search:-moz-placeholder {color: #ffffff;}
+#search::-moz-selection {color: #ffffff; background: rgba(0, 0, 0, 0.25);}
+#search::selection {color: #ffffff; background: rgba(0, 0, 0, 0.25);}
+
+
+
+#row-1, #row-01 {
+  height: 2rem;
+}
+
+#row-2 {
+  padding-top: 2rem;
+  height: 5rem;
+}
+
+#notebook-square {
+  height: 5.1rem;
+  width: 5.1rem;
+}
+
+#row-4, #row-04 {
+  height: 2rem;
+}
+#row-5, #row-05 {
+  height: 2rem;
+}
+#row-6, #row-06 {
+  height: 2rem;
+}
+#row-7, #row-07 {
+  height: 2rem;
+}
+#row-8, #row-08 {
+  height: 2rem;
+}
+#row-9, #row-09 {
+  height: 2rem;
+}
+#row-10, #row-010 {
+  height: 2rem;
+}
+#row-11, #row-011 {
+  height: 2rem;
+}
+#row-12, #row-012 {
+  height: 2rem;
+}
+#row-13, #row-013 {
+  height: 2rem;
+}
+
+.footer {
+  position: absolute;
+  margin-top: 50%;
+}
+
+@media screen {
+  
+}
+
+
+
+
+
+.dim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c9;
+  z-index: 10;
+  display: none;
+}
+
+.advert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.typewriter-text {
+  overflow: hidden; /* Ensures the text is initially hidden */
+  border-right: 0.15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  margin: 0; /* Reset margin to prevent unwanted spacing */
+  letter-spacing: 0.15em; /* Adjust the letter spacing for better visibility */
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+#typingheading {
+  margin-bottom: 2rem;
+}
+
+
