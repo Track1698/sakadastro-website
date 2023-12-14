@@ -183,12 +183,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var scaleX = canvas.width / (maxX - minX);
         var scaleY = canvas.height / (maxY - minY);
 
-        console.log('minX:', minX);
-        console.log('minY:', minY);
-        console.log('maxX:', maxX);
-        console.log('maxY:', maxY);
-        console.log('scaleX:', scaleX);
-        console.log('scaleY:', scaleY);
+        //console.log('minX:', minX);
+        //console.log('minY:', minY);
+        //console.log('maxX:', maxX);
+        //console.log('maxY:', maxY);
+        //console.log('scaleX:', scaleX);
+        //console.log('scaleY:', scaleY);
 
         // Function to convert geographical coordinates to pixel coordinates
         function convertToPixel(coord) {
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function sendkadastr () {
         const inputKadastr = document.getElementById('search').value;
-        console.log('clicked', inputKadastr);
+        //console.log('clicked', inputKadastr);
 
         
         //loadingdiv = document.getElementById("loading");
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 advertdiv.style.display = 'none';
 
                 // Handle the result returned from the backend
-                console.log(result);
+                //console.log(result);
                 // Update the DOM with the result data
                 getElements();
                 updateDOM(result);
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
             
-                console.error('Error:', error);
+                //console.error('Error:', error);
                 // Display an error message to the user
                 //infodiv.innerHTML = '<p>დაფიქსირდა შეცდომა. გთხოვთ სცადოთ მოგვიანებით</p>';
                 
