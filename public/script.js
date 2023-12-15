@@ -30,7 +30,7 @@ let advertdiv = null;
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     $(document).ready(function(){
         $("#search").focus(function() {
             $(".search-box").addClass("border-searching");
@@ -234,20 +234,26 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputKadastr = document.getElementById('search').value;
         //console.log('clicked', inputKadastr);
 
-        
-        //loadingdiv = document.getElementById("loading");
-        advertdiv = document.getElementById("dim");
-        
+        // Check conditions
+        var dotsCount = (inputKadastr.match(/\./g) || []).length;
+        var symbolsCount = inputKadastr.length;
+        var lettersCount = inputKadastr.replace(/[^a-zA-Z]/g, "").length;
+  
+        if (dotsCount >= 3 && symbolsCount >= 9 && symbolsCount <= 25 && lettersCount <= 3) {
+            // Valid input
+            console.log('Input is valid');
+            //loadingdiv = document.getElementById("loading");
+            advertdiv = document.getElementById("dim");
+            
 
-        // Check if the input is not empty
-        if (inputKadastr.trim() !== '') {
+            
+            
             //loadingdiv.style.display = 'block';
             advertdiv.style.display = 'block';
             // Prepare the data to be sent in the request body
             const data = {
                 input_kadastr: inputKadastr
             };
-
             // Make a POST request to the Flask endpoint
             fetch('https://sakadastro-2wrl4gpsga-ew.a.run.app/api/getinformation', {
                 method: 'POST',
@@ -261,20 +267,45 @@ document.addEventListener('DOMContentLoaded', function () {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
                 console.log(result)
-
-                getElements();
-                updateDOM(result);
+                // Check for the custom error code
+                if (result.error === "ArasworiSakadastro") {
+                    // Handle the custom error code
+                    console.error("Custom error code received. Handle accordingly.");
+                    swal(
+                        'შეცდომა!',
+                        'გთხოვთ გადაამოწმოთ საკადასტრო კოდი.',
+                        'error'
+                    )
+                    // You can display an error message to the user or take other actions.
+                } else {
+                    getElements();
+                    updateDOM(result);
+                }
             })
             .catch(error => {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
+                swal(
+                    'შეცდომა!',
+                    'დაფიქსირდა ტექნიკური ხარვეზი. გთხოვთ სცადოთ მოგვიანებით.',
+                    'error'
+                )
             });
-            
-            
         } else {
-            // Handle empty input, e.g., display an error message to the user
-            console.error('Input is empty');
+          // Invalid input
+          console.log('Input is invalid');
+          let searchitem = document.getElementById("info");
+
+          // Add the class
+          searchitem.classList.add("false");
+                  
+          // Remove the class after one second
+          setTimeout(function() {
+            searchitem.classList.remove("false");
+          }, 1000); // 1000 milliseconds = 1 second
         }
+        
+        
     };
 
 });

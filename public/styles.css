@@ -24,10 +24,7 @@ html, body {
   padding: 0;
   margin: 0;
 }
-a, a:visited, a:hover {
-  color: blue;
-  text-decoration: none;
-}
+
 main {
   position: absolute;
   top: 0;
@@ -309,6 +306,10 @@ p {
   outline: none;
 }
 
+#info.false {
+  animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
 
 #search::-webkit-input-placeholder {color: #ffffff;}
 #search::-moz-placeholder {color: #ffffff;}
@@ -533,4 +534,70 @@ p {
   z-index: 21;
   color: white;
   margin-top: 0.5vh;
+}
+
+
+
+
+.swal2-icon.swal2-error {
+  border-color: #f27474;  
+}
+
+.swal2-icon.swal2-error .swal2-x-mark {
+  position: relative;
+  display: block;   
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  position: absolute;
+  height: 5px;
+  width: 47px;
+  background-color: #f27474;
+  display: block;
+  top: 37px;
+  border-radius: 2px
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+  transform: rotate(45deg);
+  left: 17px
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+  transform: rotate(-45deg);
+  right: 16px 
+}
+
+.swal2-validationerror {
+  background-color: #f0f0f0;  
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+  display: none
+}
+
+.swal2-validationerror::before {
+  content: '!';  
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ea7d7d;
+  color: #fff;   
+  margin-right: 10px
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
