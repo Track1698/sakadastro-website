@@ -494,3 +494,43 @@ p {
   font-size: 30px;
   float: left;
 }
+
+.topstrip {
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  height: 2.5vh;
+  margin-bottom: 97.5vh;
+  z-index: 20;
+  text-align: center;
+  font-family: 'ninomtavruli';
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.topstrip p {
+  z-index: 21;
+  color: white;
+  margin-top: 0.5vh;
+}
+
+.bottomstrip {
+  margin-top: 97.5vh;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  height: 2.5vh;
+  margin-bottom: 0;
+  z-index: 20;
+  text-align: center;
+  font-family: 'ninomtavruli';
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.bottomstrip p {
+  z-index: 21;
+  color: white;
+  margin-top: 0.5vh;
+}

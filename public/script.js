@@ -134,10 +134,10 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             pshezghudviszona.textContent = result.kategoria;
         };
-        if (result.mesakutre.length > 30) {
-            pmesakutreebi.textContent = "";
+        if (result.mesakutre = "სახელმწიფო") {
+            pmesakutreebi.textContent = "კი";
         } else {
-            pmesakutreebi.textContent = result.mesakutre;
+            pmesakutreebi.textContent = "არა";
         };
         if (result.dzegli === true) {
             pistoriuli.textContent = "კი";
@@ -260,6 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(result => {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
+                console.log(result)
 
                 getElements();
                 updateDOM(result);
