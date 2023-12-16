@@ -272,6 +272,10 @@ p {
   stroke-width: 5;
   stroke-miterlimit: 10;
 }
+
+.border.false {
+  stroke: red;
+}
 .border {
   stroke-dasharray: 740;
   stroke-dashoffset: 0;
@@ -534,6 +538,7 @@ p {
   z-index: 21;
   color: white;
   margin-top: 0.5vh;
+  font-size: 2vmin;
 }
 
 

@@ -147,16 +147,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (result.sakadastro_pdf == null) {
             psakadastro_pdf.onclick = function() { alert("საკადასტრო რუკის დოკუმენტი არ მოიძებნა"); };
+            psakadastro_pdf.style.display = "block";
         } else {
             psakadastro_pdf.onclick = function() { open_pdf_sakadastro(result); };
+            psakadastro_pdf.style.display = "block";
         };
         
         if (result.amonaweri_pdf == null) {
             pamonaweri_pdf.onclick = function() { alert("ამონაწერის დოკუმენტი არ მოიძებნა"); };
+            pamonaweri_pdf.style.display = "block";
         } else {
             pamonaweri_pdf.onclick = function() { open_pdf_amonaweri(result); };
+            pamonaweri_pdf.style.display = "block";
         };
         pmerialink.onclick = function() { open_meria(result); };
+        pmerialink.style.display = "";
 
         var canvas = document.getElementById('canvas');
         var ctx = canvas.getContext('2d');
@@ -295,13 +300,21 @@ document.addEventListener('DOMContentLoaded', function () {
           // Invalid input
           console.log('Input is invalid');
           let searchitem = document.getElementById("info");
+          let borderofsearch = document.getElementById("border1");
+          let borderofsearch2 = document.getElementById("border2");
 
           // Add the class
           searchitem.classList.add("false");
+          borderofsearch.classList.add("false");
+          borderofsearch2.classList.add("false");
+
+
                   
           // Remove the class after one second
           setTimeout(function() {
             searchitem.classList.remove("false");
+            borderofsearch.classList.remove("false");
+            borderofsearch2.classList.remove("false");
           }, 1000); // 1000 milliseconds = 1 second
         }
         
