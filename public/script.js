@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
             
             //loadingdiv.style.display = 'block';
-            advertdiv.style.display = 'block';
+            advertdiv.style.display = 'flex';
             // Prepare the data to be sent in the request body
             const data = {
                 input_kadastr: inputKadastr

@@ -389,46 +389,58 @@ p {
   background-color: #000000c9;
   z-index: 10;
   display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .advert {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 16px; /* Adjust margin-top as needed */
 }
 
 .typewriter-text {
-  overflow: hidden; /* Ensures the text is initially hidden */
-  border-right: 0.15em solid orange; /* The typewriter cursor */
-  white-space: nowrap; /* Prevents the text from wrapping */
-  margin: 0; /* Reset margin to prevent unwanted spacing */
-  letter-spacing: 0.15em; /* Adjust the letter spacing for better visibility */
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.15em;
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-  margin-top: 16%;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-bottom: 2rem;
 }
 
 @keyframes typing {
   from {
-    width: 0;
+      width: 0;
   }
   to {
-    width: 100%;
+      width: 100%;
   }
 }
 
 @keyframes blink-caret {
   from, to {
-    border-color: transparent;
+      border-color: transparent;
   }
   50% {
+     /* border-color: orange;  Change to desired blink color */
   }
 }
 
 #typingheading {
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 35vh;
+  font-size: 3vmin;
+}
+
+#advert {
+  width: 90vmin;
+}
+
+video {
+  width: 100%;
+  height: auto;
 }
 
 
