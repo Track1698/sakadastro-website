@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 input_kadastr: inputKadastr
             };
             // Make a POST request to the Flask endpoint
-            fetch('http://localhost:5000/api/getinformation', {
+            fetch('https://sakadastro-2wrl4gpsga-ew.a.run.app/api/getinformation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
