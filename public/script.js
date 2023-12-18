@@ -66,6 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // Function to update the DOM with the result data
 
+    var cookiebtn = document.getElementById("cookie-close");
+    var cookiediv = document.getElementById("cookiePolicy");
+    
+    cookiebtn.onclick = closeCookie;
+    
+    function closeCookie() {
+      cookiediv.style.display = "none";
+    }
+    
+
 
     function open_pdf_sakadastro(result) {
         var linkToOpen = result.sakadastro_pdf;
@@ -236,6 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     function sendkadastr () {
+        closeCookie();
         const inputKadastr = document.getElementById('search').value;
         //console.log('clicked', inputKadastr);
 

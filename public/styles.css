@@ -618,3 +618,26 @@ video {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+.cookie-policy {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  background-color: #000000c4;
+  color: white;
+  padding: 10px;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.close-button {
+  cursor: pointer;
+  color: black;
+  border: none;
+  background: none;
+  font-size: 14px;
+  background-color: white;
+  padding: 5px;
+  margin-left: 40%;
+  border-radius: 8px;
+}
