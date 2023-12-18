@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             pshezghudviszona.textContent = result.kategoria;
         };
-        if (result.mesakutre = "სახელმწიფო") {
+        if (result.mesakutre === "სახელმწიფო") {
             pmesakutreebi.textContent = "კი";
         } else {
             pmesakutreebi.textContent = "არა";
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 input_kadastr: inputKadastr
             };
             // Make a POST request to the Flask endpoint
-            fetch('https://sakadastro-2wrl4gpsga-ew.a.run.app/api/getinformation', {
+            fetch('http://localhost:5000/api/getinformation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
