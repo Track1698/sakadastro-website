@@ -66,6 +66,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // Function to update the DOM with the result data
 
+    // Array of video URLs
+    var videoUrls = [
+      'banner.mp4',
+      'yourbanner.mp4',
+      // Add more video URLs as needed
+    ];
+
+    // Get a random index from the array
+    var randomIndex = Math.floor(Math.random() * videoUrls.length);
+
+    // Set the video source to the randomly selected URL
+    var videoPlayer = document.getElementById('videoplayer');
+    videoPlayer.src = videoUrls[randomIndex];
+
     var cookiebtn = document.getElementById("cookie-close");
     var cookiediv = document.getElementById("cookiePolicy");
     
