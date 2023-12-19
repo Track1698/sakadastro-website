@@ -35,6 +35,7 @@
         text-align: center;
         font-size: 3.5vw;
         margin-top: 0;
+        cursor: pointer;
     }
     
     h2 {
@@ -75,7 +76,16 @@
 </head>
 <body>
 <p class="firstElement"><b>ბოლო განახლება: [დეკემბერი 2023]</b></p>
-<h1 class="mainheading">SAKADASTRO.GE</h1>
+
+<h1 class="mainheading" onclick="redirectToIndex()">SAKADASTRO.GE</h1>
+
+<script>
+  function redirectToIndex() {
+    // Redirect to index.html
+    window.location.href = 'index.html';
+  }
+</script>
+
 
 <p class="secondElement">SAKADASTRO.GE ვებგვერდზე წვდომით და მისი გამოყენებით, თქვენ ეთანხმებით, საიტის წესებსა და პირობებს</p>
 <h2>საიტის გამოყენება</h2>
