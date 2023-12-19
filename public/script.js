@@ -62,7 +62,7 @@ let coll12 = null;
 let coll13 = null;
 
 let resizeTimer = null;
-
+let verticalLine = null;
 //let loadingdiv = null;
 let advertdiv = null;
 
@@ -300,6 +300,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function matchHeights() {
             if (document.getElementById("maindiv").classList.contains('got-data')) {
+                verticalLine = document.getElementById('verticalLine');
+
                 col1 = document.getElementById('row-01');
                 col3 = document.getElementById('row-03');
                 col4 = document.getElementById('row-04');
@@ -349,6 +351,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 coll11.style.height = heightElement11 + 'px';
                 coll12.style.height = heightElement12 + 'px';
                 coll13.style.height = heightElement13 + 'px';
+
+                verticalLine.style.height = heightElement1 + heightElement3 + heightElement4 + heightElement5 + heightElement6 + heightElement7 + heightElement8 + heightElement9 + heightElement10 + heightElement11 + heightElement12 + heightElement13 + heightElement13 + heightElement13 + heightElement13 + 'px';
             }
         };
         window.addEventListener('resize', function() {
