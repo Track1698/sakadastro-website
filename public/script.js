@@ -385,12 +385,16 @@ document.addEventListener('DOMContentLoaded', function () {
             //console.log('Input is valid');
             //loadingdiv = document.getElementById("loading");
             advertdiv = document.getElementById("dim");
+            loadingCancel = document.getElementById("loadingCancel");
             
 
             
             
             //loadingdiv.style.display = 'block';
             advertdiv.style.display = 'flex';
+            loadingCancel.onclick = function() {
+                window.location.href = 'index.html'; // Replace 'index.html' with the actual path to your main page
+            };
             // Prepare the data to be sent in the request body
             const data = {
                 input_kadastr: inputKadastr

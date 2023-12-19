@@ -357,8 +357,15 @@ p {
   
 }
 
+.tanxmobap {
+  color: white;
+}
 
-
+.tanxmobaa {
+  color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 .dim {
@@ -369,22 +376,21 @@ p {
   z-index: 10;
   display: none;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+
 }
 
 .advert {
-  margin-top: 16px; /* Adjust margin-top as needed */
+  margin-top: 1vh; /* Adjust margin-top as needed */
 }
 
 .typewriter-text {
-  overflow: hidden;
-  border-right: 0.15em solid orange;
-  white-space: nowrap;
-  margin: 0;
-  letter-spacing: 0.15em;
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-  margin-bottom: 2rem;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.15em;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -407,10 +413,8 @@ p {
 
 #typingheading {
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 35vh;
-  font-size: 3vmin;
+    font-size: 3vmin;
+    margin-top: 1vh;
 }
 
 #advert {
@@ -681,4 +685,14 @@ video {
   h1 {
     font-size: 4vmin;
   }
+}
+
+.loadingcancel {
+  background-color: #000000a8;
+  font-size: 2vh;
+  font-family: 'regularfont';
+  padding: 1vh;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 1vh;
 }
