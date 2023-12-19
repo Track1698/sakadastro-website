@@ -21,6 +21,48 @@ let containerdiv = null;
 let container2div = null;
 let container3div = null;
 
+let col1 = null;
+let col2 = null;
+let col3 = null;
+let col4 = null;
+let col5 = null;
+let col6 = null;
+let col7 = null;
+let col8 = null;
+let col9 = null;
+let col10 = null;
+let col11 = null;
+let col12 = null;
+let col13 = null;
+let heightElement1 = null;
+let heightElement2 = null;
+let heightElement3 = null;
+let heightElement4 = null;
+let heightElement5 = null;
+let heightElement6 = null;
+let heightElement7 = null;
+let heightElement8 = null;
+let heightElement9 = null;
+let heightElement10 = null;
+let heightElement11 = null;
+let heightElement12 = null;
+let heightElement13 = null;
+let coll1 = null;
+let coll2 = null;
+let coll3 = null;
+let coll4 = null;
+let coll5 = null;
+let coll6 = null;
+let coll7 = null;
+let coll8 = null;
+let coll9 = null;
+let coll10 = null;
+let coll11 = null;
+let coll12 = null;
+let coll13 = null;
+
+let resizeTimer = null;
+
 //let loadingdiv = null;
 let advertdiv = null;
 
@@ -254,7 +296,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Draw the polygon using the provided coordinates
         drawPolygon(result.transformed_coordinates);
-        
+
+
+        function matchHeights() {
+            if (document.getElementById("maindiv").classList.contains('got-data')) {
+                col1 = document.getElementById('row-01');
+                col3 = document.getElementById('row-03');
+                col4 = document.getElementById('row-04');
+                col5 = document.getElementById('row-05');
+                col6 = document.getElementById('row-06');
+                col7 = document.getElementById('row-07');
+                col8 = document.getElementById('row-08');
+                col9 = document.getElementById('row-09');
+                col10 = document.getElementById('row-010');
+                col11 = document.getElementById('row-011');
+                col12 = document.getElementById('row-012');
+                col13 = document.getElementById('row-013');
+                heightElement1 = col1.offsetHeight;
+                heightElement3 = col3.offsetHeight;
+                heightElement4 = col4.offsetHeight;
+                heightElement5 = col5.offsetHeight;
+                heightElement6 = col6.offsetHeight;
+                heightElement7 = col7.offsetHeight;
+                heightElement8 = col8.offsetHeight;
+                heightElement9 = col9.offsetHeight;
+                heightElement10 = col10.offsetHeight;
+                heightElement11 = col11.offsetHeight;
+                heightElement12 = col12.offsetHeight;
+                heightElement13 = col13.offsetHeight;
+                coll1 = document.getElementById('row-1');
+                coll3 = document.getElementById('row-3');
+                coll4 = document.getElementById('row-4');
+                coll5 = document.getElementById('row-5');
+                coll6 = document.getElementById('row-6');
+                coll7 = document.getElementById('row-7');
+                coll8 = document.getElementById('row-8');
+                coll9 = document.getElementById('row-9');
+                coll10 = document.getElementById('row-10');
+                coll11 = document.getElementById('row-11');
+                coll12 = document.getElementById('row-12');
+                coll13 = document.getElementById('row-13');
+
+                coll1.style.height = heightElement1 + 'px';
+                coll3.style.height = heightElement3 + 'px';
+                coll4.style.height = heightElement4 + 'px';
+                coll5.style.height = heightElement5 + 'px';
+                coll6.style.height = heightElement6 + 'px';
+                coll7.style.height = heightElement7 + 'px';
+                coll8.style.height = heightElement8 + 'px';
+                coll9.style.height = heightElement9 + 'px';
+                coll10.style.height = heightElement10 + 'px';
+                coll11.style.height = heightElement11 + 'px';
+                coll12.style.height = heightElement12 + 'px';
+                coll13.style.height = heightElement13 + 'px';
+            }
+        };
+        window.addEventListener('resize', function() {
+            // Debouncing the function to avoid rapid execution during resize
+            //console.log("size changed");
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(matchHeights, 200); // Adjust the debounce time as needed
+          });
 
         containerdiv.classList.add("got-data");
         // Sleep for 1 second (1000 milliseconds)
@@ -262,11 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
             maindiv.classList.add("got-data");
             container2div.classList.add("active");
             container3div.classList.add("active");
-            var col1 = document.getElementById('row-04');
-            var heightElement1 = col1.offsetHeight;
-
-            var col2 = document.getElementById('row-4');
-            col2.style.height = heightElement1 + 'px';
+            matchHeights();
         }, 1000);
 
     };

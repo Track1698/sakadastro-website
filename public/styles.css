@@ -346,36 +346,7 @@ p {
   width: 5.1rem;
 }
 
-#row-4, #row-04 {
-  height: auto;
-}
-#row-5, #row-05 {
-  height: 2rem;
-}
-#row-6, #row-06 {
-  height: 2rem;
-}
-#row-7, #row-07 {
-  height: 2rem;
-}
-#row-8, #row-08 {
-  height: 2rem;
-}
-#row-9, #row-09 {
-  height: 2rem;
-}
-#row-10, #row-010 {
-  height: 2rem;
-}
-#row-11, #row-011 {
-  height: 2rem;
-}
-#row-12, #row-012 {
-  height: 2rem;
-}
-#row-13, #row-013 {
-  height: 2rem;
-}
+
 
 .footer {
   position: absolute;
@@ -681,7 +652,6 @@ video {
 
   #maindiv.got-data {
     width: 100%;
-    height: auto;
     flex: 1;
     overflow-y: auto;
   }
