@@ -65,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     // Function to update the DOM with the result data
+    var container = document.getElementById('info');
+    var heading = container.querySelector('h1');
+    heading.onclick = function() {
+        window.location.href = 'index.html'; // Replace 'index.html' with the actual path to your main page
+    };
 
     // Array of video URLs
     var videoUrls = [
@@ -271,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
         if (dotsCount >= 3 && symbolsCount >= 9 && symbolsCount <= 25 && lettersCount <= 3) {
             // Valid input
-            console.log('Input is valid');
+            //console.log('Input is valid');
             //loadingdiv = document.getElementById("loading");
             advertdiv = document.getElementById("dim");
             
@@ -296,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(result => {
                 //loadingdiv.style.display = 'none';
                 advertdiv.style.display = 'none';
-                console.log(result)
+                //console.log(result)
                 // Check for the custom error code
                 if (result.error === "ArasworiSakadastro") {
                     // Handle the custom error code
@@ -323,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
           // Invalid input
-          console.log('Input is invalid');
+          //console.log('Input is invalid');
           let searchitem = document.getElementById("info");
           let borderofsearch = document.getElementById("border1");
           let borderofsearch2 = document.getElementById("border2");
