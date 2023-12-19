@@ -152,6 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
         pk1.textContent = result.k1;
         pk2.textContent = result.k2;
         pk3.textContent = result.k3;
+
+        
+
         if (result.latest_ganxN === null) {
             pgancxadeba.textContent = "არა";
         } else {
@@ -259,6 +262,11 @@ document.addEventListener('DOMContentLoaded', function () {
             maindiv.classList.add("got-data");
             container2div.classList.add("active");
             container3div.classList.add("active");
+            var col1 = document.getElementById('row-04');
+            var heightElement1 = col1.offsetHeight;
+
+            var col2 = document.getElementById('row-4');
+            col2.style.height = heightElement1 + 'px';
         }, 1000);
 
     };
