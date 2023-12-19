@@ -358,6 +358,19 @@ document.addEventListener('DOMContentLoaded', function () {
             resizeTimer = setTimeout(matchHeights, 200); // Adjust the debounce time as needed
           });
 
+        function checkForClass() {
+            var element = document.getElementById("maindiv");
+      
+            if (element.classList.contains('got-data')) {
+              matchHeights();
+            } else {
+              //console.log('Element does not have the class "got-data"');
+            }
+          }
+      
+          // Call the function every second
+          setInterval(checkForClass, 1000);
+
         containerdiv.classList.add("got-data");
         // Sleep for 1 second (1000 milliseconds)
         setTimeout(function () {
@@ -371,6 +384,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     function sendkadastr () {
+        
+
+
         closeCookie();
         const inputKadastr = document.getElementById('search').value;
         //console.log('clicked', inputKadastr);
