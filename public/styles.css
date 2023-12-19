@@ -633,7 +633,7 @@ video {
   border-radius: 8px;
 }
 
-@media (max-width: 852px) {
+@media (max-width: 852px), (max-height: 970px) {
   
   #btn-sakadastro {
     width: 70vmin;
@@ -659,6 +659,7 @@ video {
     width: 100%;
     flex: 1;
     overflow-y: auto;
+    height: auto;
   }
   
   #btn-meria {
